@@ -21,5 +21,6 @@ venv
 venv/
 docs.zip
 archive.zip
+iris.ipynb
 *~
 .*.sw?

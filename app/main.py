@@ -6,8 +6,8 @@ from fastapi.testclient import TestClient
 
 
 app = FastAPI()
-# irisSavedFile = 'irisSavedModel.joblib'
-# clfUploaded = load(irisSavedFile)
+irisSavedFile = 'irisSavedModel.joblib'
+clfUploaded = load(irisSavedFile)
 
 @app.get("/")
 def root():
