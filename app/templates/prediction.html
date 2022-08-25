@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<h2>Iris Prediction Result</h2>
+<table>
+  <tr>
+    <th>Iris Type Predicted</th>
+    <th>Probability</th>
+    <th>Probabilities</th>
+
+  </tr>
+  <tr>
+    <td>{{predicted}}</td>
+    <td>{{probabilty}}</td>
+    <td>{{probalities}}</td>
+  </tr>
+
+</table>
+
+{% endblock %}
