@@ -1,8 +1,12 @@
 from fastapi import FastAPI
+from joblib import load, dump
+
 
 app = FastAPI()
 
+irisSavedFile = 'irisSavedModel.joblib'
+clfUploaded = load(irisSavedFile)
 
 @app.get("/")
-def read_root():
-    return {"Hello": "World"}
+def root():
+    return FileResponse('index.html')
