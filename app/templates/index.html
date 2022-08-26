@@ -1,60 +1,40 @@
 <!DOCTYPE html>
 <html>
-<title>iris ML</title>
+<title>Machine Learing Iris Prediction</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/x-icon" href="https://archive.ics.uci.edu/ml/assets/MLimages/Large53.jpg">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<style>
-  table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #dddddd;
-  }
-  </style>
-  <body></body>
-<div class="w3-container w3-center">
+  <body>
+<div class="w3-container w3-center w3-responsive">
 
 
-    <h1>Prediction Iris Dataset</h1>
+    <h1 class="w3-panel w3-border-left w3-light-grey w3-padding-32 w3-center">Prediction Iris Dataset</h1>
+    <div class="w3-container w3-margin" >
     <form action="/predict/">
-    <table>
-      <tr>
-        <th>Sepal Length</th>
-        <th>Sepal Width</th>
-        <th>Petal Length</th>
-        <th>Petal Width</th>
+    <table class="w3-table w3-bordered w3-card-4 w3-center w3-panel w3-padding-32" style="width:60%; margin-left:auto;margin-right:auto; ">
+      <tr class="w3-teal w3-center">
+        <th class="w3-col" style="width:25%">Sepal Length</th>
+        <th class="w3-col" style="width:25%">Sepal Width</th>
+        <th class="w3-col" style="width:25%">Petal Length</th>
+        <th class="w3-col" style="width:25%">Petal Width</th>
       </tr>
       <tr>
-        <td><input type="number" name="L1" value="1.2" min="0" max= "10" step="any"></td>
-        <td><input type="number" name="W1" value="1.2" min="0" max= "10" step="any"></td>
-        <td><input type="number" name="L2" value="1.2" min="0" max= "10" step="any"></td>
-        <td><input type="number" name="W2" value="1.2" min="0" max= "10" step="any"></td>
+        <td class="w3-col" style="width:25%"><input type="number" name="L1" value="1.2" min="0" max= "10" step="any"></td>
+        <td class="w3-col" style="width:25%"><input type="number" name="W1" value="1.2" min="0" max= "10" step="any"></td>
+        <td class="w3-col" style="width:25%"><input type="number" name="L2" value="1.2" min="0" max= "10" step="any"></td>
+        <td class="w3-col" style="width:25%"><input type="number" name="W2" value="1.2" min="0" max= "10" step="any"></td>
       </tr>
     
     </table>
     <br>
-    <input type="submit" value="PREDICT!">
+    <input class="w3-card-4 w3-red w3-btn w3-round-large w3-xxlarge" type="submit" value="Predict">
     </form>
-    
-    <p>If you click the "PREDICT!" button, the form-data will be sent to a page called "/predict".</p>
-    
-    <div id="content">
+  </div>
+  <hr>
+  <div id="content">
         {% block content %}{% endblock %}
     </div>
     
-    
-    
-
-
 </div>
 
 </body>
