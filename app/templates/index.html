@@ -5,45 +5,80 @@
 <link rel="icon" type="image/x-icon" href="https://archive.ics.uci.edu/ml/assets/MLimages/Large53.jpg">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <body>
-<div class="w3-container w3-center w3-responsive">
+
+<body>
+  <div class="w3-container w3-center w3-responsive">
 
 
     <h1 class="w3-panel w3-border-left w3-light-grey w3-padding-32 w3-center">Prediction Iris Dataset</h1>
-    <div class="w3-container w3-margin" >    
-
-    <form action="/predict/">
-    <table class="w3-table w3-bordered w3-card-4 w3-center w3-panel w3-padding-32" style="width:60%; margin-left:auto;margin-right:auto; ">
-      <tr class="w3-teal w3-center">
-        <th class="w3-col" style="width:25%">Sepal Length</th>
-        <th class="w3-col" style="width:25%">Sepal Width</th>
-        <th class="w3-col" style="width:25%">Petal Length</th>
-        <th class="w3-col" style="width:25%">Petal Width</th>
-      </tr>
-      <tr>
-        <td class="w3-col" style="width:25%"><input type="number" name="L1" value="1.2" min="0" max= "10" step="any"></td>
-        <td class="w3-col" style="width:25%"><input type="number" name="W1" value="1.2" min="0" max= "10" step="any"></td>
-        <td class="w3-col" style="width:25%"><input type="number" name="L2" value="1.2" min="0" max= "10" step="any"></td>
-        <td class="w3-col" style="width:25%"><input type="number" name="W2" value="1.2" min="0" max= "10" step="any"></td>
-      </tr>
-    
-    </table>
-    <br>
-
-    <div class="w3-row">
-      <div class="w3-container w3-half">
-        <input class="w3-card-4 w3-green w3-btn w3-round-large w3-large" type="submit" value="Click to Predict the entered data">
-    </form>
+    <div class="w3-row ">
+      <div class="w3-container w3-quarter w3-light-gray w3-margin">
+        <h4 class="w3-teal">Example</h4>
+        <p> 5.4,3.9,1.7,0.4,Iris-setosa </p>
+        <p> 4.6,3.4,1.4,0.3,Iris-setosa </p>
+        <p> 7.0,3.2,4.7,1.4,Iris-versicolor </p>
+        <p> 6.4,3.2,4.5,1.5,Iris-versicolor </p>
+        <p> 6.3,3.3,6.0,2.5,Iris-virginica </p>
+        <p> 5.8,2.7,5.1,1.9,Iris-virginica </p>
       </div>
-      <div class="w3-container w3-half">
-        <a class="w3-card-4 w3-red w3-btn w3-round-large w3-large" href="/">Reset Prediction</a>
+      <div class="w3-container w3-rest w3-light-gray w3-margin">
+
+
+        <div class="w3-container w3-margin">
+
+          <form action="/predict/">
+            <table class="w3-table w3-bordered w3-card-4 w3-center w3-panel w3-padding-32"
+              style="width:80%; margin-left:auto;margin-right:auto; ">
+              <tr class="w3-teal w3-center">
+                <th class="w3-col" style="width:25%">Sepal Length</th>
+                <th class="w3-col" style="width:25%">Sepal Width</th>
+                <th class="w3-col" style="width:25%">Petal Length</th>
+                <th class="w3-col" style="width:25%">Petal Width</th>
+              </tr>
+              <tr>
+                <td class="w3-col" style="width:25%"><input type="number" name="L1" value="1.2" min="0" max="10"
+                    step="any">
+                </td>
+                <td class="w3-col" style="width:25%"><input type="number" name="W1" value="1.2" min="0" max="10"
+                    step="any">
+                </td>
+                <td class="w3-col" style="width:25%"><input type="number" name="L2" value="1.2" min="0" max="10"
+                    step="any">
+                </td>
+                <td class="w3-col" style="width:25%"><input type="number" name="W2" value="1.2" min="0" max="10"
+                    step="any">
+                </td>
+              </tr>
+
+            </table>
+            <br>
+
+            <div class="w3-row">
+              <div class="w3-container w3-half">
+                <input class="w3-card-4 w3-green w3-btn w3-round-large w3-large" type="submit"
+                  value="Click to Predict the entered data">
+          </form>
+        </div>
+        <div class="w3-container w3-half">
+          <a class="w3-card-4 w3-red w3-btn w3-round-large w3-large" href="/">Reset Prediction</a>
+        </div>
       </div>
     </div>
+  </div>
+  </div>
+  </div>
 
-  <hr>
-  <div id="content">
-        {% block content %}{% endblock %}
-    </div>
-    
+  <div class="w3-margin w3-light-gray" id="content">
+    <hr>
+    {% block content %}{% endblock %}
+    <hr>
+  </div>
+
+  <div class="w3-light-grey w3-padding-32 w3-center w3-bottom">
+    <p>Github:  <a href="https://fastapi-iris-ml.herokuapp.com/">https://github.com/iozberk/FastAPI-Iris-project</a></p>
+  </div>
+
+
 </body>
+
 </html>
